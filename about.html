@@ -25,6 +25,21 @@
     <link rel="canonical" href="https://morfriend.com/about">
 
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MORFRIEND EV Tech Co., Ltd.", "alternateName": "Morfriend Manufacturing", "url": "https://morfriend.com", "logo": "https://morfriend.com/assets/images/main/og-default.jpg", "description": "Premium golf cart windshield manufacturer specializing in DOT-certified, UV-stabilized acrylic and polycarbonate windshields for Club Car, EZGO, Yamaha, and custom OEM applications.", "address": {"@type": "PostalAddress", "addressCountry": "CN"}, "sameAs": []}</script>
+    <style>
+        #facility-track {
+            display: flex;
+            width: max-content;
+            animation: facility-scroll 35s linear infinite;
+        }
+        #facility-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes facility-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Navigation -->
@@ -122,43 +137,246 @@
         </div>
     </section>
 
-    <!-- Core Values -->
+    <!-- Production Facility -->
     <section class="py-20 bg-light content-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider uppercase mb-4">Our Values</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">What Drives Us</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto text-lg">The core principles that guide every decision we make</p>
+                <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wider uppercase mb-4">PRODUCTION FACILITY</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Advanced Production Capabilities</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg whitespace-nowrap">State-of-the-art machinery driving precision, efficiency, and scalable B2B output.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
-                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-check-circle text-primary text-3xl"></i>
+            <div class="relative">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden" id="facility-carousel">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="facility-track">
+                        <!-- Card 1 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-cutting-01.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-cutting-01.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">CNC Cutting — Precision cutting for custom windshield dimensions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-polish-02.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-polish-02.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Surface Polishing — High-gloss finishing for optical clarity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-laser-03.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-laser-03.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Laser Processing — High-precision laser cutting and engraving</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-CNC-04.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-CNC-04.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">CNC Machining — Automated shaping for complex contours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-edging-05.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-edging-05.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Edge Finishing — Smooth, burr-free edges for safe handling</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-hotbending-06.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-hotbending-06.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Hot Bending — Precision thermoforming for curved windshields</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-packaging-07.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-packaging-07.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Packaging — Protective packing for global B2B shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-warehouse-08.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-warehouse-08.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Warehouse — Organized inventory ready for fast dispatch</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 1 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-cutting-01.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-cutting-01.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">CNC Cutting — Precision cutting for custom windshield dimensions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-polish-02.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-polish-02.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Surface Polishing — High-gloss finishing for optical clarity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-laser-03.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-laser-03.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Laser Processing — High-precision laser cutting and engraving</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-CNC-04.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-CNC-04.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">CNC Machining — Automated shaping for complex contours</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-edging-05.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-edging-05.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Edge Finishing — Smooth, burr-free edges for safe handling</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-hotbending-06.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-hotbending-06.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Hot Bending — Precision thermoforming for curved windshields</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-packaging-07.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-packaging-07.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Packaging — Protective packing for global B2B shipping</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div style="width: 300px; flex-shrink: 0; padding-left: 0.75rem; padding-right: 0.75rem;">
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="relative bg-gray-100" style="aspect-ratio:4/3">
+                                    <picture>
+                                        <source srcset="assets/images/main/morfried-facility-warehouse-08.webp" type="image/webp">
+                                        <img src="assets/images/main/morfried-facility-warehouse-08.jpg" alt="Production Facility" class="w-full h-full object-cover" loading="lazy">
+                                    </picture>
+                                </div>
+                                <div class="p-4">
+                                    <p class="text-gray-600 text-sm text-center">Warehouse — Organized inventory ready for fast dispatch</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Quality</h3>
-                    <p class="text-gray-600">Uncompromising commitment to excellence in every product we manufacture. Rigorous testing at every stage ensures superior quality.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
-                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-lightbulb text-primary text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Innovation</h3>
-                    <p class="text-gray-600">Continuous improvement of materials, designs, and manufacturing processes to stay ahead of industry demands.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
-                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-shield-alt text-primary text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Reliability</h3>
-                    <p class="text-gray-600">Consistent delivery, dependable performance, and trustworthy partnerships built on integrity and transparency.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg card-hover text-center">
-                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-primary text-3xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-primary mb-3">Customer Focus</h3>
-                    <p class="text-gray-600">Your success is our priority. We listen, adapt, and deliver solutions that exceed your expectations.</p>
-                </div>
+
             </div>
         </div>
     </section>
@@ -444,5 +662,7 @@
         });
     </script>
     <script src="assets/js/lazy-loading.js" defer></script>
+
+    
 </body>
 </html>
