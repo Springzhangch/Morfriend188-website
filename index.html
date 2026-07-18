@@ -354,36 +354,55 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 rounded-xl hover:bg-light transition-colors">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl text-primary"></i>
+                <!-- 14x Stronger -->
+                <div class="feature-video-card text-center p-6 rounded-xl hover:bg-light transition-colors group">
+                    <div class="video-wrapper rounded-xl overflow-hidden mb-4 mx-auto w-full" style="max-width:300px;aspect-ratio:1/1">
+                        <video class="w-full h-full object-cover" preload="none" muted loop playsinline
+                               poster="assets/videos/windshield-impact-poster.webp"
+                               data-src="assets/videos/windshield-impact.webm"></video>
                     </div>
+                    <div class="mx-auto" style="max-width:300px">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">14x Stronger</h3>
                     <p class="text-gray-600 text-sm">Impact-resistant polycarbonate construction offers 14x the strength of standard plastic windshields.</p>
+                    </div>
                 </div>
                 
-                <div class="text-center p-6 rounded-xl hover:bg-light transition-colors">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-sun text-2xl text-primary"></i>
+                <!-- UV Protection -->
+                <div class="feature-video-card text-center p-6 rounded-xl hover:bg-light transition-colors group">
+                    <div class="video-wrapper rounded-xl overflow-hidden mb-4 mx-auto w-full" style="max-width:300px;aspect-ratio:1/1">
+                        <video class="w-full h-full object-cover" preload="none" muted loop playsinline
+                               poster="assets/videos/windshield-uv-poster.webp"
+                               data-src="assets/videos/windshield-uv.webm"></video>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">UV Protection</h3>
-                    <p class="text-gray-600 text-sm">Built-in UV protection and anti-glare tint for comfortable vision and lasting clarity.</p>
+                    <div class="mx-auto" style="max-width:300px">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">UV Protection</h3>
+                        <p class="text-gray-600 text-sm">Built-in UV protection and anti-glare tint for comfortable vision and lasting clarity.</p>
+                    </div>
                 </div>
-                
-                <div class="text-center p-6 rounded-xl hover:bg-light transition-colors">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-eye text-2xl text-primary"></i>
+                <!-- 92% Clarity -->
+                <div class="feature-video-card text-center p-6 rounded-xl hover:bg-light transition-colors group">
+                    <div class="video-wrapper rounded-xl overflow-hidden mb-4 mx-auto w-full" style="max-width:300px;aspect-ratio:1/1">
+                        <video class="w-full h-full object-cover" preload="none" muted loop playsinline
+                               poster="assets/videos/windshield-transmittance-poster.webp"
+                               data-src="assets/videos/windshield-transmittance.webm"></video>
                     </div>
+                    <div class="mx-auto" style="max-width:300px">
                     <h3 class="text-lg font-bold text-gray-900 mb-2">92% Clarity</h3>
                     <p class="text-gray-600 text-sm">Exceptional 92% light transmittance with anti-yellowing material for crystal-clear visibility.</p>
+                    </div>
                 </div>
                 
-                <div class="text-center p-6 rounded-xl hover:bg-light transition-colors">
-                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bolt text-2xl text-primary"></i>
+                <!-- 2H Surface Hardness -->
+                <div class="feature-video-card text-center p-6 rounded-xl hover:bg-light transition-colors group">
+                    <div class="video-wrapper rounded-xl overflow-hidden mb-4 mx-auto w-full" style="max-width:300px;aspect-ratio:1/1">
+                        <video class="w-full h-full object-cover" preload="none" muted loop playsinline
+                               poster="assets/videos/windshield-scratch-poster.webp"
+                               data-src="assets/videos/windshield-scratch.webm"></video>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">5-Min Install</h3>
-                    <p class="text-gray-600 text-sm">Pre-drilled holes enable tool-free installation in under 5 minutes with included hardware.</p>
+                    <div class="mx-auto" style="max-width:300px">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">2H Surface Hardness</h3>
+                    <p class="text-gray-600 text-sm">Pencil-hardness rated 2H coating resists daily scratches from dust, wiping, and road debris for long-lasting clarity.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -755,6 +774,40 @@
 
             window.location.href = `mailto:spring@morfriend.com?subject=${encodeURIComponent('New Quote Request - Morfriend Website')}&body=${encodeURIComponent(body)}`;
         });
+    </script>
+    <!-- Feature Video Hover Play -->
+    <script>
+    (function() {
+        const cards = document.querySelectorAll('.feature-video-card');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                const video = entry.target.querySelector('video');
+                if (video && video.dataset.src) {
+                    var s = document.createElement('source');
+                    s.src = video.dataset.src;
+                    s.type = 'video/webm';
+                    video.appendChild(s);
+                    delete video.dataset.src;
+                }
+                observer.unobserve(entry.target);
+            });
+        }, { rootMargin: '300px' });
+
+        cards.forEach(function(card) {
+            observer.observe(card);
+            var video = card.querySelector('video');
+            if (!video) return;
+            card.addEventListener('mouseenter', function() {
+                video.currentTime = 0;
+                video.play().catch(function() {});
+            });
+            card.addEventListener('mouseleave', function() {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    })();
     </script>
     <script src="assets/js/lazy-loading.js" defer></script>
 </body>
